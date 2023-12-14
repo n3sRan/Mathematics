@@ -2,15 +2,68 @@
 
 ### 4.3 空间曲面和空间曲线
 
-#### 空间曲面与空间曲线的方程
+#### 空间曲面方程
 
 空间曲面$S$的方程: $F(x,y,z) = 0$
 
-空间曲线$C$的一般式方程: $\begin{equation}
-\left\{\begin{aligned}
-  &\text{$F(x,y,z) = 0$,} \\
-  &\text{$G(x,y,z) = 0$.}
-\end{aligned}\right.\end{equation}$
+#### 空间曲线方程
+
+- 空间直线的方程: 一般式, 对称式, 参数式
+
+- 空间曲线的一般式方程: (一般式方程不唯一)
+  $$
+  \begin{equation}
+  \left
+  \{\begin{aligned}
+    &\text{$F(x,y,z) = 0$} \\
+    &\text{$G(x,y,z) = 0$}
+  \end{aligned}
+  \right.
+  \end{equation}
+  $$
+
+- 空间曲线的参数方程: 
+  $$
+  \begin{equation}
+  \left
+  \{\begin{aligned}
+    &\text{$x = x(t)$} \\
+    &\text{$y = y(t)$}  \\ 
+    &\text{$z = z(t)$}
+  \end{aligned}
+  \right.
+  \end{equation}
+  \space t \in [\alpha,\beta]
+  $$
+
+  - 螺旋线的参数方程
+    $$
+    \begin{equation}
+    \left
+    \{\begin{aligned}
+      &\text{$x = acos\theta$} \\
+      &\text{$y = bsin\theta$}  \\ 
+      &\text{$z = b\theta \space (b = \frac{v}{\omega})$}
+    \end{aligned}
+    \right.
+    \end{equation}
+    \space \theta \in R
+    $$
+
+##### 空间曲线在坐标面上的投影
+
+- 对空间曲线 $C:\begin{equation}
+  \left
+  \{\begin{aligned}
+    &\text{$F(x,y,z) = 0$} \\
+    &\text{$G(x,y,z) = 0$}
+  \end{aligned}
+  \right.
+  \end{equation}$ 的方程式消去变量$z$后得到的方程$h(x,y)=0$称为曲线$C$到$xOy$平面的**投影柱面**, 而投影柱面与$xOy$平面的交线 $\begin{equation}
+  \left\{\begin{aligned}
+    &\text{$h(x,y)=0$,} \\
+    &\text{$z = 0$}
+  \end{aligned}\right.\end{equation}$ 就是空间曲线$C$在$xOy$平面上的**投影曲线** (或称**投影**), 同理可得在其他平面上投影.
 
 #### 柱面
 
@@ -26,15 +79,31 @@
   \space / \space \\
   y = ax^2
   \space / \space
-  \frac{x^2}{a^2} - \frac{y^2}{b^2} = 1
+  \frac{x^2}{a^2} - \frac{y^2}{b^2} = 1D
   $$
+  
 
+##### 柱面的方程
 
-
-
-
-
-
+以曲线$C: \begin{equation}
+\left
+\{\begin{aligned}
+  &\text{$F(x,y,z) = 0$} \\
+  &\text{$G(x,y,z) = 0$}
+\end{aligned}
+\right.
+\end{equation}$ 为准线, 母线方向向量为$s = (l,m,n)$的柱面的方程为
+$$
+\begin{equation}
+\left
+\{\begin{aligned}
+  &\text{$F(x-lt,y-mt,z-nt) = 0$} \\
+  &\text{$G(x-lt,y-mt,z-nt) = 0$}
+\end{aligned}
+\right.
+\end{equation}
+$$
+其中$t$为参数. 此式为**柱面方程的参数形式**.
 
 
 #### 旋转曲面
@@ -84,7 +153,12 @@
     $$
     \frac{x^2}{a^2} + \frac{y^2+z^2}{b^2} = 1
     $$
-- ( 若$x^2,y^2,z^2$系数互不相等则称曲面为椭球面, 但不能由曲线旋转得来, 也不是旋转曲面. )
+  
+- 若$x^2,y^2,z^2$系数互不相等则称曲面为**椭球面**, 但不能由曲线旋转得来, 也不是旋转曲面.
+    $$
+    \frac{x^2}{a^2} + \frac{y^2}{b^2} + \frac{z^2}{c^2} = 1
+    $$
+
 
 ##### 圆锥面
 
@@ -134,74 +208,74 @@
   $$
   
 
+#### 锥面
+
+- 已知一定点$M_0(x_0,y_0,z_0)$和一条与其不共面的空间曲线$C$, 由点$M_0$与曲线$C$上所有的点的连线$L$所生成的曲面称为锥面. 点$M_0$称为锥面的顶点, 曲线$C$称为锥面的准线, 锥面上过顶点的任一条直线$L$称为锥面的母线, 方程为 (锥面的参数式方程) : 
+  $$
+  \begin{equation}
+  \left
+  \{\begin{aligned}
+    &\text{$F(x_0+t(x-x_0),y_0+t(y-y_0),z_0+t(z-z_0)) = 0$} \\
+    &\text{$G(x_0+t(x-x_0),y_0+t(y-y_0),z_0+t(z-z_0)) = 0$}
+  \end{aligned}
+  \right.
+  \end{equation}
+  $$
+  
+
 #### 二次曲面
 
-1. 截痕法
-2. 伸缩变换
-   谁乘$\frac{a}{b}$, 谁就伸缩$\frac{b}{a}$倍.
+三元二次方程
+$$
+a_{11}x^2+a_{22}y^2+a_{33}z^2+2a_{12}xy+2a_{23}yz+2a_{31}zx+2b_1x+2b_2y+2b_3z+c = 0
+$$
+可以通过平移变换和旋转变换把一般的二次曲面方程化为标准形式. 通过平移变换消去一次项, 通过旋转变换消去混合项.
+
+##### 平移变换公式: 
+
+$$
+x=x'+a,\space
+y=y'+b,\space
+z=z'+c
+$$
+##### 坐标旋转变换公式: 
+
+$$
+\begin{bmatrix}
+  x \\ y \\z
+\end{bmatrix}
+=
+\begin{bmatrix}
+  \cos{\alpha_1}& \cos{\alpha_2}& \cos{\alpha_3} \\ 
+  \cos{\beta_1}& \cos{\beta_2}& \cos{\beta_3} \\
+  \cos{\gamma_1}&  \cos{\gamma_2}&  \cos{\gamma_3}
+\end{bmatrix}
+\begin{bmatrix}
+  x' \\ y' \\z'
+\end{bmatrix}
+$$
+或写为: 
+$$
+\begin{bmatrix}
+  x' \\ y' \\z'
+\end{bmatrix}
+=
+\begin{bmatrix}
+  \cos{\alpha_1}& \cos{\beta_1}& \cos{\gamma_1} \\ 
+  \cos{\alpha_2}& \cos{\beta_2}& \cos{\gamma_2} \\
+  \cos{\alpha_3}&  \cos{\beta_3}&  \cos{\gamma_3}
+\end{bmatrix}
+\begin{bmatrix}
+  x \\ y \\z
+\end{bmatrix}
+$$
+##### 伸缩变换: 
+
+- 谁乘$\frac{a}{b}$, 谁就伸缩$\frac{b}{a}$倍.
 
 ##### 双曲抛物面 (马鞍面) 
 
 $$
 \frac{x^2}{a^2} - \frac{y^2}{b^2} = z
 $$
-
-#### 空间曲线方程
-
-- 空间直线的方程: 一般式, 对称式, 参数式
-
-- 空间曲线的一般式方程: (一般式方程不唯一)
-  $$
-  \begin{equation}
-  \left
-  \{\begin{aligned}
-    &\text{$F(x,y,z) = 0$} \\
-    &\text{$G(x,y,z) = 0$}
-  \end{aligned}
-  \right.
-  \end{equation}
-  $$
-  
-- 空间曲线的参数方程: 
-  $$
-  \begin{equation}
-  \left
-  \{\begin{aligned}
-    &\text{$x = x(t)$} \\
-    &\text{$y = y(t)$}  \\ 
-    &\text{$z = z(t)$}
-  \end{aligned}
-  \right.
-  \end{equation}
-  \space t \in [\alpha,\beta]
-  $$
-
-  - 螺旋线的参数方程
-    $$
-    \begin{equation}
-    \left
-    \{\begin{aligned}
-      &\text{$x = acos\theta$} \\
-      &\text{$y = bsin\theta$}  \\ 
-      &\text{$z = b\theta \space (b = \frac{v}{\omega})$}
-    \end{aligned}
-    \right.
-    \end{equation}
-    \space \theta \in R
-    $$
-
-##### 空间曲线在坐标面上的投影
-
-- 对空间曲线 $C:\begin{equation}
-  \left
-  \{\begin{aligned}
-    &\text{$F(x,y,z) = 0$} \\
-    &\text{$G(x,y,z) = 0$}
-  \end{aligned}
-  \right.
-  \end{equation}$ 的方程式消去变量$z$后得到的方程$h(x,y)=0$称为曲线$C$到$xOy$平面的**投影柱面**, 而投影柱面与$xOy$平面的交线 $\begin{equation}
-  \left\{\begin{aligned}
-    &\text{$h(x,y)=0$,} \\
-    &\text{$z = 0$}
-  \end{aligned}\right.\end{equation}$ 就是空间曲线$C$在$xOy$平面上的**投影曲线** (或称**投影**), 同理可得在其他平面上投影.
 
